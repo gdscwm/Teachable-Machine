@@ -1,4 +1,4 @@
-# Teachable-Machine
+## Teachable-Machine
 training a machine learning model for image classification
 
 
@@ -16,11 +16,18 @@ Install VS Code or some form of Python IDE.
 Teachable Machine Model Creation:
 
 Go to Teachable Machine. Select Get Started.
+
+
 Create a new Image Project -> Standard image model
+
 Upload images into class 1 and class 2. (You can use our dataset images or upload your own)
+
 In our example, we are using Dogs are Class 1 and Cats as Class 2. 
+
 After images are added, select train. 
+
 You can make changes to the Epochs, batch size, and learning rate using the "Advanced" drop-down.
+
 
 Epochs determine how many times data is passed through the model. Normally more is better, but it depends on the size of the data set. Batch size is the set of samples that are used for training. 
 If we use 100 images for each class and the default batch size is 16, then our batch size would be 100/16 or about 6. Learning rate is how hyperparameters influence the model learning speed. 
