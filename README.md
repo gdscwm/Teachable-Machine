@@ -4,21 +4,52 @@ training a machine learning model for image classification
 
 PowerPoint Explanation!
 
+
+Setup:
+
 Go to: https://teachablemachine.withgoogle.com/
 
-Download the dataset: https://www.microsoft.com/en-us/download/details.aspx?id=54765 (or get your own pictures)
+Download and unzip the dataset: https://www.microsoft.com/en-us/download/details.aspx?id=54765 (or get your own pictures)
 
 Install VS Code or some form of Python IDE. 
 
+Teachable Machine Model Creation:
+
+Go to Teachable Machine. Select Get Started.
+Create a new Image Project -> Standard image model
+Upload images into class 1 and class 2. (You can use our dataset images or upload your own)
+In our example, we are using Dogs are Class 1 and Cats as Class 2. 
+After images are added, select train. 
+You can make changes to the Epochs, batch size, and learning rate using the "Advanced" drop-down.
+
+Epochs determine how many times data is passed through the model. Normally more is better, but it depends on the size of the data set. Batch size is the set of samples that are used for training. 
+If we use 100 images for each class and the default batch size is 16, then our batch size would be 100/16 or about 6. Learning rate is how hyperparameters influence the model learning speed. 
+
+
+Look at the model output and test selecting different images. See how accurate the classification is. 
+
+Select Export model and download the Tensorflow Keras model. This converts the model to a keras .h5 model which can further make challenges to with Python. 
+
+Open up VS Code or another Python IDE. Open the model and data set in the same directory. 
+
 
 Write the model code:
-
 
 To install Tensorflow, run:
 
 ```
 pip install tensorflow
 ```
+
+Tensorflow is a library used for machine learning predictions. 
+
+
+If you get an error about opencv, you can install it by running: 
+```
+pip install opencv-python
+```
+Opencv is used for image processing. 
+
 
 We will start with imports and loading in the model:
 
@@ -31,7 +62,7 @@ import numpy as np
 # Load the model
 model = keras.models.load_model("keras_model.h5", compile=False)
 
-# Load the labels
+# Load the labels (This is what classifies the images as either a cat or dog)
 class_names = open("labels.txt", "r").readlines()
 
 image_path = "/PetImages/Cat/1.jpg" #add the path of your image directory 
@@ -63,6 +94,7 @@ confidence_score = prediction[0][index]
 Display classification 
 
 ```
+#Get the class accuracy an confidence to display on the label 
 text = "Class: {} Confidence: {:.2f}% ".format(class_name[2:], confidence_score * 100)
 
 # Determine the width of the widest line of text
@@ -101,6 +133,8 @@ cv2.destroyAllWindows()
 
 
 ```
+This should load the image with the classification label into a new window. 
+
 
 Yay!!! You have created an image classifier! ML!
 
