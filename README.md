@@ -7,7 +7,7 @@ Download the dataset: https://www.microsoft.com/en-us/download/details.aspx?id=5
 
 Generate the model code:
 
-
+"""
 from keras.models import load_model  # TensorFlow is required for Keras to work
 import cv2  # Install opencv-python
 import numpy as np
@@ -59,3 +59,4 @@ while True:
 
 camera.release()
 cv2.destroyAllWindows()
+"""
