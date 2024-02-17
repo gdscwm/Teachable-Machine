@@ -15,8 +15,7 @@ Install VS Code or some form of Python IDE.
 
 Teachable Machine Model Creation:
 
-Go to Teachable Machine. Select Get Started.
-
+## Go to Teachable Machine. Select Get Started.
 
 Create a new Image Project -> Standard image model
 
@@ -28,6 +27,7 @@ After images are added, select train.
 
 You can make changes to the Epochs, batch size, and learning rate using the "Advanced" drop-down.
 
+## Explanation 
 
 Epochs determine how many times data is passed through the model. Normally more is better, but it depends on the size of the data set. Batch size is the set of samples that are used for training. 
 If we use 100 images for each class and the default batch size is 16, then our batch size would be 100/16 or about 6. Learning rate is how hyperparameters influence the model learning speed. 
@@ -40,7 +40,7 @@ Select Export model and download the Tensorflow Keras model. This converts the m
 Open up VS Code or another Python IDE. Open the model and data set in the same directory. 
 
 
-Write the model code:
+## Write the model code:
 
 To install Tensorflow, run:
 
