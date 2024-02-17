@@ -149,9 +149,5 @@ This should load the image with the classification label into a new window.
 Yay!!! You have created an image classifier! ML!
 
 
-Further Work:
-
-You can implement a heatmap visualization on the image:
-
 
 
