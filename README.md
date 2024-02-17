@@ -1,6 +1,7 @@
 # Teachable-Machine
-training a machine learning model for image classification
 
+
+Training a machine learning model for binary image classification
 
 PowerPoint Explanation!
 
@@ -19,7 +20,7 @@ Go to Teachable Machine. Select Get Started.
 
 Create a new Image Project -> Standard image model
 
-Upload images into class 1 and class 2. (You can use our dataset images or upload your own)
+Upload images into class 1 and class 2. (You can use our dataset images or upload your own, there is also a webcam feature)
 
 In our example, we are using Dogs are Class 1 and Cats as Class 2. 
 
@@ -29,13 +30,15 @@ You can make changes to the Epochs, batch size, and learning rate using the "Adv
 
 ## Explanation 
 
+We are creating a binary image classifier, which has one class set as '1' and the other set as '0'. 
+
 Epochs determine how many times data is passed through the model. Normally more is better, but it depends on the size of the data set. Batch size is the set of samples that are used for training. 
 If we use 100 images for each class and the default batch size is 16, then our batch size would be 100/16 or about 6. Learning rate is how hyperparameters influence the model learning speed. 
 
 
 Look at the model output and test selecting different images. See how accurate the classification is. 
 
-Select Export model and download the Tensorflow Keras model. This converts the model to a keras .h5 model which can further make challenges to with Python. 
+Select 'Export' model and download the Tensorflow Keras model. This converts the model to a keras .h5 model which can further make challenges to with Python. 
 
 Open up VS Code or another Python IDE. Open the model and data set in the same directory. 
 
@@ -48,7 +51,7 @@ To install Tensorflow, run:
 pip install tensorflow
 ```
 
-Tensorflow is a library used for machine learning predictions. 
+TensorFlow is a library used for machine learning predictions. 
 
 
 If you get an error about opencv, you can install it by running: 
