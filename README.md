@@ -1,11 +1,11 @@
-## Teachable-Machine
+# Teachable-Machine
 training a machine learning model for image classification
 
 
 PowerPoint Explanation!
 
 
-Setup:
+##Setup:
 
 Go to: https://teachablemachine.withgoogle.com/
 
