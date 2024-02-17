@@ -13,9 +13,9 @@ Download and unzip the dataset: https://www.microsoft.com/en-us/download/details
 
 Install VS Code or some form of Python IDE. 
 
-Teachable Machine Model Creation:
+## Teachable Machine Model Creation:
 
-## Go to Teachable Machine. Select Get Started.
+Go to Teachable Machine. Select Get Started.
 
 Create a new Image Project -> Standard image model
 
