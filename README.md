@@ -172,10 +172,11 @@ First install matplot lib:
 python -m pip install -U matplotlib
 ```
 
-Import matplot at the top of the script:
+Import matplot at the top of the script and add tensorflow:
 
 ```
 import matplotlib.pyplot as plt
+import tensorflow as tf 
 ```
 
 
