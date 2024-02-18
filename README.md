@@ -75,7 +75,7 @@ model = keras.models.load_model("keras_model.h5", compile=False)
 # Load the labels (This is what classifies the images as either a cat or dog)
 class_names = open("labels.txt", "r").readlines()
 
-image_path = "/PetImages/Cat/1.jpg" #add the path of your image directory 
+image_path = "/PetImages/(Cat or Dog)/ImageNumber.jpg" #add the path of your image directory
 image = cv2.imread(image_path)
 ```
 
@@ -148,6 +148,71 @@ This should load the image with the classification label into a new window.
 
 Yay!!! You have created an image classifier! ML!
 
+## Further Exploration 
+
+You can try loading different images into the model by changing the image path:
+
+```
+image_path = "/PetImages/(Cat or Dog)/ImageNumber.jpg" #add the path of your image directory
+```
+
+You can generate an image heatmap: 
+
+To generate the heatmap, we compute the gradient of the output class score using the activations of the last convolutional layer. 
+This gradient represents how much each pixel in the input image contributes to the final class score.
+
+First install matplot lib:
+
+```
+python -m pip install -U matplotlib
+```
+
+Import matplot at the top of the script:
+
+```
+import matplotlib.pyplot as plt
+```
 
 
+Code for generation:
+
+```
+# Get the output tensor of the last convolutional layer
+last_conv_layer = model.get_layer("conv2d_2")
+
+# Generate class activation heatmap
+with tf.GradientTape() as tape:
+    grads = tape.gradient(prediction, last_conv_layer.output)
+    pooled_grads = tf.reduce_mean(grads, axis=(0, 1, 2))
+
+# The gradients obtained are pooled across spatial dimensions using global average pooling.
+
+#These gradients are then combined with the activations of the last convolutional layer to produce a heatmap. T
+#The heatmap highlights the regions of the image that had the highest influence on the model's prediction.
+
+heatmap = tf.reduce_mean(tf.multiply(pooled_grads, last_conv_layer.output), axis=-1)
+heatmap = np.maximum(heatmap, 0)
+heatmap /= np.max(heatmap)
+
+# Resize heatmap to match the image size
+heatmap = cv2.resize(heatmap, (resized_image.shape[1], resized_image.shape[0]))
+heatmap = np.uint8(255 * heatmap)
+
+# Apply heatmap to the original image
+heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
+superimposed_img = cv2.addWeighted(resized_image, 0.6, heatmap, 0.4, 0)
+
+# Display the original image, heatmap, and superimposed image
+fig, axs = plt.subplots(1, 3, figsize=(15, 5))
+axs[0].imshow(cv2.cvtColor(resized_image, cv2.COLOR_BGR2RGB))
+axs[0].set_title('Original Image')
+axs[0].axis('off')
+axs[1].imshow(heatmap)
+axs[1].set_title('Heatmap')
+axs[1].axis('off')
+axs[2].imshow(cv2.cvtColor(superimposed_img, cv2.COLOR_BGR2RGB))
+axs[2].set_title('Superimposed Image')
+axs[2].axis('off')
+plt.show()
+```
 
