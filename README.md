@@ -150,6 +150,11 @@ Yay!!! You have created an image classifier! ML!
 
 ## Further Exploration 
 
+Some Resources:
+
+Tensorflow basic image classification: https://www.tensorflow.org/tutorials/images/classification
+
+
 You can try loading different images into the model by changing the image path:
 
 ```
