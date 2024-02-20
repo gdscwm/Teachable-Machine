@@ -49,6 +49,7 @@ Open up VS Code or another Python IDE. Open the model and data set in the same d
 ## Write the model code:
 
 Create a python file and name it model.py
+
 Important: make sure the dataset, python file, and keras.h5 model are in the same directory/Python project. 
 
 To install Tensorflow, run:
