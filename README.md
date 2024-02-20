@@ -14,6 +14,7 @@ Download and unzip the dataset: https://www.microsoft.com/en-us/download/details
 
 Install VS Code or some form of Python IDE. 
 VS Code: https://code.visualstudio.com/
+
 PyCharm: https://www.jetbrains.com/pycharm/download/
 
 ## Teachable Machine Model Creation:
