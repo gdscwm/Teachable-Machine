@@ -23,9 +23,9 @@ Go to Teachable Machine. Select Get Started.
 
 Create a new Image Project -> Standard image model
 
-Upload images into class 1 and class 2. (You can use our dataset images or upload your own, there is also a webcam feature)
-
-In our example, we are using Dogs are Class 1 and Cats as Class 2. 
+Change Class 1 name to "Dogs" and Class 2 to "Cats"
+Upload around 200-500 images of cats into class 1 and dogs into class 2. The main thing to remember is do not upload all images from the dataset, it will take time to load.
+(You can use our dataset images or upload your own, there is also a webcam feature)
 
 After images are added, select train. 
 
