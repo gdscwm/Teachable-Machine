@@ -13,6 +13,8 @@ Go to: https://teachablemachine.withgoogle.com/
 Download and unzip the dataset: https://www.microsoft.com/en-us/download/details.aspx?id=54765 (or get your own pictures)
 
 Install VS Code or some form of Python IDE. 
+VS Code: https://code.visualstudio.com/
+PyCharm: https://www.jetbrains.com/pycharm/download/
 
 ## Teachable Machine Model Creation:
 
@@ -38,12 +40,15 @@ If we use 100 images for each class and the default batch size is 16, then our b
 
 Look at the model output and test selecting different images. See how accurate the classification is. 
 
-Select 'Export' model and download the Tensorflow Keras model. This converts the model to a keras .h5 model which can further make challenges to with Python. 
+Select 'Export' model and download the Tensorflow Keras model. This converts the model to a keras .h5 model which you can further make challenges to with Python. 
 
 Open up VS Code or another Python IDE. Open the model and data set in the same directory. 
 
 
 ## Write the model code:
+
+Create a python file and name it model.py
+Important: make sure the dataset, python file, and keras.h5 model are in the same directory/Python project. 
 
 To install Tensorflow, run:
 
