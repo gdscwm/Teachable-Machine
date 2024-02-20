@@ -58,6 +58,13 @@ To install Tensorflow, run:
 pip install tensorflow
 ```
 
+or 
+
+```
+pip3 install tensorflow
+```
+
+
 TensorFlow is a library used for machine learning predictions. 
 
 
@@ -151,6 +158,19 @@ cv2.destroyAllWindows()
 
 ```
 This should load the image with the classification label into a new window. 
+
+run the code with:
+
+```
+python model.py
+```
+
+Or 
+
+```
+python3 model.py
+
+```
 
 
 Yay!!! You have created an image classifier! ML!
