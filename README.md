@@ -52,6 +52,16 @@ Create a python file and name it model.py
 
 Important: make sure the dataset, python file, and keras.h5 model are in the same directory/Python project. 
 
+Create a Python virtual environment using conda (This is recommended way to avoid versioning errors):
+
+```
+conda create -n [env_name]
+conda activate [env_name]
+
+```
+
+
+
 To install Tensorflow, run:
 
 ```
@@ -64,6 +74,12 @@ or
 pip3 install tensorflow
 ```
 
+or if you are in your conda env
+```
+conda install conda-forge::tensorflow
+```
+
+
 
 TensorFlow is a library used for machine learning predictions. 
 
@@ -72,6 +88,14 @@ If you get an error about opencv, you can install it by running:
 ```
 pip install opencv-python
 ```
+or 
+
+```
+conda install conda-forge::opencv
+
+```
+
+
 Opencv is used for image processing. 
 
 
