@@ -95,6 +95,8 @@ conda install conda-forge::opencv
 
 ```
 
+https://anaconda.org/conda-forge/opencv
+
 
 Opencv is used for image processing. 
 
